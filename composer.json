@@ -1,0 +1,8 @@
+{
+    "require": {
+        "flightphp/core": "^3.11",
+        "eftec/bladeone": "^4.13",
+        "fpdf/fpdf": "^1.86",
+        "kint-php/kint": "^5.1"
+    }
+}
