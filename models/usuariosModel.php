@@ -9,4 +9,7 @@ class UsuariosModel extends Sqlite
     {
         return $this->getData("SELECT * FROM usuarios WHERE 1");
     }
+    public function obtenerUsuarioPorEmail($email){
+        return $this->getData("SELECT id, email, clave FROM usuarios WHERE email = ? AND estado = 1", [$email]);
+    }
 }
