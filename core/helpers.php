@@ -19,3 +19,10 @@ function base($path = '')
 {
     return URL . $path;
 }
+function existeSesion(){
+    session_start();
+    if (empty($_SESSION['id'] || empty($_SESSION['email']))) {
+        return false;
+    }
+    return true;
+}
