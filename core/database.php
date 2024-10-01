@@ -1,10 +1,10 @@
 <?php
 class Database
 {
-    private $host = 'localhost';
-    private $db_name = 'db_sis_home';
-    private $username = 'root';
-    private $password = '';
+    private $host = DB_HOST;
+    private $db_name = DB_NAME_DB;
+    private $username = DB_USER;
+    private $password = DB_PASSWORD;
     private $conn;
 
     // Obtener la conexión a la base de datos

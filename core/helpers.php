@@ -21,7 +21,7 @@ function base($path = '')
 }
 function existeSesion(){
     session_start();
-    if (empty($_SESSION['id']) || empty($_SESSION['email'])) {
+    if (empty($_SESSION['id']) || empty($_SESSION['correo'])) {
         return false;
     }
     return true;

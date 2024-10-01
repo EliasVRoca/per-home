@@ -1,5 +1,5 @@
 <?php
-class UsuariosModel extends Sqlite
+class UsuariosModel extends Database
 {
     function __construct()
     {
@@ -7,9 +7,9 @@ class UsuariosModel extends Sqlite
     }
     public function obtenerTodosUsuarios()
     {
-        return $this->getData("SELECT * FROM usuarios WHERE 1");
+        return $this->getData("SELECT * FROM tbl_usuarios WHERE 1");
     }
     public function obtenerUsuarioPorEmail($email){
-        return $this->getData("SELECT id, email, clave FROM usuarios WHERE email = ? AND estado = 1", [$email]);
+        return $this->getData("SELECT id, correo, clave FROM tbl_usuarios WHERE correo = ? AND estado = 1", [$email]);
     }
 }

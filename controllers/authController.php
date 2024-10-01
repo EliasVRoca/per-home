@@ -27,7 +27,7 @@ class authController
             Flight::redirect(base() . "/auth/login?error");
         } else {
             session_start();
-            $_SESSION['email'] = $email;
+            $_SESSION['correo'] = $email;
             $_SESSION['id'] = $usuario[0]['id'];
             Flight::redirect('/sis/inicio');
         }
@@ -36,7 +36,7 @@ class authController
     {
         session_start();
         $_SESSION['id'] = '';
-        $_SESSION['email'] = '';
+        $_SESSION['correo'] = '';
         session_destroy();
         Flight::redirect('/auth/login');
     }
